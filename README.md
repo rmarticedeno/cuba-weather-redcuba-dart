@@ -1,8 +1,10 @@
-# Cuba Weather
+# Cuba Weather Dart
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/leynier/cuba-weather-dart/Publisher)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cuba-weather/cuba-weather-dart/Publisher)
 
-Dart client for [www.redcuba.cu](https://www.redcuba.cu) weather API. Given a location in Cuba, if it is within the permitted locations, weather data on the location is obtained.
+Application programming interface of the Cuba Weather project implemented in Dart.
+
+Currently the weather information is obtained from the Cuban search engine [www.redcuba.cu](https://www.redcuba.cu).
 
 - To see how to install the package, follow this [link](https://pub.dev/packages/cuba_weather_dart#-installing-tab-).
 
