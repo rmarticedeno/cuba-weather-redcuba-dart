@@ -1,4 +1,4 @@
-# Cuba Weather
+# Cuba Weather Dart
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![Pub Version](https://img.shields.io/pub/v/cuba_weather_dart) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/leynier/cuba-weather-dart/Publisher)
 
