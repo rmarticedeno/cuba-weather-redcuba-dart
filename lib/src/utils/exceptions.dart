@@ -4,8 +4,8 @@ class BadRequestException implements Exception {
   BadRequestException(this.message);
 }
 
-class InvalidLocationException implements Exception {
+class InvalidSourceException implements Exception {
   final String message;
 
-  InvalidLocationException(this.message);
+  InvalidSourceException(this.message);
 }

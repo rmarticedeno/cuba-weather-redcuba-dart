@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:cuba_weather_dart/cuba_weather_dart.dart';
+import 'package:cuba_weather_redcuba_dart/cuba_weather_redcuba_dart.dart';
 
 void main() {
-  print('Insert location:');
-  var location = stdin.readLineSync();
-  var cubaWeather = CubaWeather();
-  cubaWeather.get(location, suggestion: true).then((weather) {
+  print('Insert municipality:');
+  var input = stdin.readLineSync();
+  var cubaWeatherRedCuba = CubaWeatherRedCuba();
+  cubaWeatherRedCuba.get(input).then((weather) {
     print(weather);
   });
 }

@@ -1,4 +1,10 @@
-# Cuba Weather Changelog
+# Cuba Weather Red Cuba Dart Changelog
+
+## [2.0.0] - January 25, 2020
+
+* Rename the package from `cuba_weather_dart` to `cuba_weather_redcuba_dart`
+* Added all the municipalities of Cuba
+* New algorithm to search the weather information of a municipality
 
 ## [1.3.3] - January 21, 2020
 
