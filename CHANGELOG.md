@@ -1,4 +1,4 @@
-# Cuba Weather Changelog
+# Cuba Weather Red Cuba Dart Changelog
 
 ## [1.3.3] - January 21, 2020
 
