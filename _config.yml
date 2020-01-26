@@ -1,5 +1,5 @@
-title: Cuba Weather Dart
-description: Dart client for www.redcuba.cu weather API
+title: Cuba Weather Red Cuba Dart
+description: Application programming interface of the Cuba Weather project for [www.redcuba.cu](https://www.redcuba.cu) implemented in Dart
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
