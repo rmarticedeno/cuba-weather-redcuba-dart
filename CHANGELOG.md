@@ -1,5 +1,10 @@
 # Cuba Weather Red Cuba Dart Changelog
 
+## [2.0.1] - January 25, 2020
+
+* Update `cuba_weather_municipality_dart` package to `v0.1.2`
+* Fix description of package
+
 ## [2.0.0] - January 25, 2020
 
 * Rename the package from `cuba_weather_dart` to `cuba_weather_redcuba_dart`
