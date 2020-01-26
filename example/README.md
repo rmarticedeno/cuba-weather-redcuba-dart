@@ -1,6 +1,6 @@
 # Cuba Weather Red Cuba Dart Examples
 
-Example of Dart client for [www.redcuba.cu](https://www.redcuba.cu) weather API. Given a municipality of Cuba, weather data on the municipality is obtained.
+Example of application programming interface of the Cuba Weather project for [www.redcuba.cu](https://www.redcuba.cu) implemented in Dart.
 
 ```dart
 import 'dart:io';
