@@ -1,6 +1,6 @@
 # Cuba Weather Red Cuba Dart Changelog
 
-## [2.0.2] - January 26, 2020
+## [2.0.3] - January 26, 2020
 
 * Update dependencies
 
