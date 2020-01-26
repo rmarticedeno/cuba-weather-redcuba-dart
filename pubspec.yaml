@@ -1,6 +1,6 @@
 name: cuba_weather_redcuba_dart
-description: Dart client for www.redcuba.cu weather API. Given a municipality in Cuba, weather data on the municipality is obtained.
 version: 2.0.0
+description: Application programming interface of the Cuba Weather project for [www.redcuba.cu](https://www.redcuba.cu) implemented in Dart.
 homepage: https://github.com/cuba-weather/cuba-weather-redcuba-dart
 
 environment:
