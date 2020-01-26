@@ -208,11 +208,6 @@ var sources = [
     lon: -80.567778,
   ),
   SourceModel(
-    name: 'Aguada de pasajeros',
-    lat: 22.384722,
-    lon: -80.846111,
-  ),
-  SourceModel(
     name: 'Cumanayagüa',
     lat: 22.152222,
     lon: -80.201111,
