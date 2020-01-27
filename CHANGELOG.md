@@ -1,5 +1,10 @@
 # Cuba Weather Red Cuba Dart Changelog
 
+## [2.1.0] - January 27, 2020
+
+* Implement enum for wind direction
+* Implement parse for wind velocity
+
 ## [2.0.3] - January 26, 2020
 
 * Update dependencies

@@ -33,7 +33,9 @@ class CubaWeatherRedCuba {
       temp: weather.temp,
       iconWeather: weather.iconWeather,
       descriptionWeather: weather.descriptionWeather,
-      windstring: weather.windstring,
+      windVelocity: weather.windVelocity,
+      windDirection: weather.windDirection,
+      windDirectionDescription: weather.windDirectionDescription,
       pressure: weather.pressure,
       humidity: weather.humidity,
     );
