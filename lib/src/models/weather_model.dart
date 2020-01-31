@@ -70,22 +70,38 @@ class WeatherModel {
   static CardinalPoint _parseDirection(String input) {
     var direction = input.split(' ')[0].toLowerCase().trim();
     switch (direction) {
-      case 'norte':
-        return CardinalPoint.North;
+      case 'norte-noroeste':
+        return CardinalPoint.North_Northwest;
       case 'noreste':
-        return CardinalPoint.Northeast;
+        return CardinalPoint.Northwest;
+      case 'este-noreste':
+        return CardinalPoint.East_Northeast;
       case 'este':
         return CardinalPoint.East;
+      case 'este-sureste':
+        return CardinalPoint.East_Southeast;
       case 'sureste':
         return CardinalPoint.Southeast;
+      case 'sur-sureste':
+        return CardinalPoint.South_Southeast;
       case 'sur':
         return CardinalPoint.South;
+      case 'sur-suroeste':
+        return CardinalPoint.South_Southwest;
       case 'suroeste':
         return CardinalPoint.Southwest;
+      case 'oeste-suroeste':
+        return CardinalPoint.West_Southwest;
       case 'oeste':
         return CardinalPoint.West;
+      case 'oeste-noroeste':
+        return CardinalPoint.West_Northwest;
       case 'noroeste':
-        return CardinalPoint.Northwest;
+        return CardinalPoint.Northeast;
+      case 'norte-noroeste':
+        return CardinalPoint.North_Northeast;
+      case 'norte':
+        return CardinalPoint.North;
       default:
         return CardinalPoint.North;
     }
@@ -112,13 +128,22 @@ class WeatherDateModel {
   }
 }
 
+/// Cardinal Point directions source: https://www.ecured.cu/Velocidad_del_viento
 enum CardinalPoint {
   North,
+  North_Northeast,
   Northeast,
+  East_Northeast,
   East,
+  East_Southeast,
   Southeast,
+  South_Southeast,
   South,
+  South_Southwest,
   Southwest,
+  West_Southwest,
   West,
+  West_Northwest,
   Northwest,
+  North_Northwest,
 }
