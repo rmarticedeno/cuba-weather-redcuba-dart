@@ -70,10 +70,10 @@ class WeatherModel {
   static CardinalPoint _parseDirection(String input) {
     var direction = input.split(' ')[0].toLowerCase().trim();
     switch (direction) {
-      case 'norte-noroeste':
-        return CardinalPoint.North_Northwest;
+      case 'norte-noreste':
+        return CardinalPoint.North_Northeast;
       case 'noreste':
-        return CardinalPoint.Northwest;
+        return CardinalPoint.Northeast;
       case 'este-noreste':
         return CardinalPoint.East_Northeast;
       case 'este':
@@ -97,9 +97,9 @@ class WeatherModel {
       case 'oeste-noroeste':
         return CardinalPoint.West_Northwest;
       case 'noroeste':
-        return CardinalPoint.Northeast;
+        return CardinalPoint.Northwest;
       case 'norte-noroeste':
-        return CardinalPoint.North_Northeast;
+        return CardinalPoint.North_Northwest;
       case 'norte':
         return CardinalPoint.North;
       default:
