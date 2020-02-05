@@ -10,6 +10,7 @@ class WeatherModel {
   final double windVelocity;
   final CardinalPoint windDirection;
   final String windDirectionDescription;
+  final int windDirectionDegree;
   final String descriptionWeather;
 
   /// Class constructor
@@ -23,6 +24,7 @@ class WeatherModel {
     this.windVelocity,
     this.windDirection,
     this.windDirectionDescription,
+    this.windDirectionDegree,
     this.descriptionWeather,
   });
 
@@ -37,6 +39,7 @@ class WeatherModel {
     beginIndex = endIndex + 3;
     endIndex = windString.length;
     var windDirectionDesc = windString.substring(beginIndex, endIndex).trim();
+    var windDegree = _parseWindDegree(windDirectionDesc);
     return WeatherModel(
       cityName: data['cityName'],
       dt: WeatherDateModel.fromJson(data['dt']),
@@ -46,6 +49,7 @@ class WeatherModel {
       iconWeather: data['iconWeather'],
       windVelocity: windVelocity,
       windDirection: _parseDirection(windDirectionDesc),
+      windDirectionDegree: windDegree,
       windDirectionDescription: windDirectionDesc,
       descriptionWeather: data['descriptionWeather'],
     );
@@ -62,9 +66,15 @@ class WeatherModel {
     result.write('Wind Velocity: ${windVelocity} Km/h\n');
     result.write('Wind Direction: ${windDirection}\n');
     result.write('Wind Direction Description: ${windDirectionDescription}\n');
+    result.write('Wind Direction Degree: ${windDirectionDegree}\n');
     result.write('Description: ${descriptionWeather}\n');
     result.write('Image Link: ${iconWeather}');
     return result.toString();
+  }
+
+  static int _parseWindDegree(String input){
+    var degree = input.split(' ')[1].substring(1);
+    return int.parse(degree);
   }
 
   static CardinalPoint _parseDirection(String input) {
