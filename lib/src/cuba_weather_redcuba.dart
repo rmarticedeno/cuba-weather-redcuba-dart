@@ -36,6 +36,8 @@ class CubaWeatherRedCuba {
       windVelocity: weather.windVelocity,
       windDirection: weather.windDirection,
       windDirectionDescription: weather.windDirectionDescription,
+      windDirectionDegree: weather.windDirectionDegree,
+      windDirectionRadians: weather.windDirectionRadians,
       pressure: weather.pressure,
       humidity: weather.humidity,
     );

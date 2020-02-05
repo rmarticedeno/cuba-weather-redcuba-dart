@@ -1,3 +1,4 @@
+import 'dart:math';
 /// Model class for mapping the json returned by the https://www.redcuba.cu
 /// weather API
 class WeatherModel {
@@ -10,6 +11,8 @@ class WeatherModel {
   final double windVelocity;
   final CardinalPoint windDirection;
   final String windDirectionDescription;
+  final int windDirectionDegree;
+  final double windDirectionRadians;
   final String descriptionWeather;
 
   /// Class constructor
@@ -23,6 +26,8 @@ class WeatherModel {
     this.windVelocity,
     this.windDirection,
     this.windDirectionDescription,
+    this.windDirectionDegree,
+    this.windDirectionRadians,
     this.descriptionWeather,
   });
 
@@ -37,6 +42,7 @@ class WeatherModel {
     beginIndex = endIndex + 3;
     endIndex = windString.length;
     var windDirectionDesc = windString.substring(beginIndex, endIndex).trim();
+    var windDegree = _parseWindDegree(windDirectionDesc);
     return WeatherModel(
       cityName: data['cityName'],
       dt: WeatherDateModel.fromJson(data['dt']),
@@ -46,7 +52,9 @@ class WeatherModel {
       iconWeather: data['iconWeather'],
       windVelocity: windVelocity,
       windDirection: _parseDirection(windDirectionDesc),
+      windDirectionDegree: windDegree,
       windDirectionDescription: windDirectionDesc,
+      windDirectionRadians: _parseWindRadians(windDegree),
       descriptionWeather: data['descriptionWeather'],
     );
   }
@@ -62,9 +70,24 @@ class WeatherModel {
     result.write('Wind Velocity: ${windVelocity} Km/h\n');
     result.write('Wind Direction: ${windDirection}\n');
     result.write('Wind Direction Description: ${windDirectionDescription}\n');
+    result.write('Wind Direction Degree: ${windDirectionDegree}\n');
+    result.write('Wind Direction Radians: ${windDirectionRadians}\n');
     result.write('Description: ${descriptionWeather}\n');
     result.write('Image Link: ${iconWeather}');
     return result.toString();
+  }
+
+  static double _parseWindRadians(int degree){
+    double temp = degree * pi;
+    double temp2 = temp / 180;
+    print(temp);
+    print(temp2);
+    return temp2;
+  }
+
+  static int _parseWindDegree(String input){
+    var degree = input.split(' ')[1].substring(1);
+    return int.parse(degree);
   }
 
   static CardinalPoint _parseDirection(String input) {
