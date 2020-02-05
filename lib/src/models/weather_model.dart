@@ -1,3 +1,4 @@
+import 'dart:math';
 /// Model class for mapping the json returned by the https://www.redcuba.cu
 /// weather API
 class WeatherModel {
@@ -11,6 +12,7 @@ class WeatherModel {
   final CardinalPoint windDirection;
   final String windDirectionDescription;
   final int windDirectionDegree;
+  final double windDirectionRadians;
   final String descriptionWeather;
 
   /// Class constructor
@@ -25,6 +27,7 @@ class WeatherModel {
     this.windDirection,
     this.windDirectionDescription,
     this.windDirectionDegree,
+    this.windDirectionRadians,
     this.descriptionWeather,
   });
 
@@ -51,6 +54,7 @@ class WeatherModel {
       windDirection: _parseDirection(windDirectionDesc),
       windDirectionDegree: windDegree,
       windDirectionDescription: windDirectionDesc,
+      windDirectionRadians: _parseWindRadians(windDegree),
       descriptionWeather: data['descriptionWeather'],
     );
   }
@@ -67,9 +71,18 @@ class WeatherModel {
     result.write('Wind Direction: ${windDirection}\n');
     result.write('Wind Direction Description: ${windDirectionDescription}\n');
     result.write('Wind Direction Degree: ${windDirectionDegree}\n');
+    result.write('Wind Direction Radians: ${windDirectionRadians}\n');
     result.write('Description: ${descriptionWeather}\n');
     result.write('Image Link: ${iconWeather}');
     return result.toString();
+  }
+
+  static double _parseWindRadians(int degree){
+    double temp = degree * pi;
+    double temp2 = temp / 180;
+    print(temp);
+    print(temp2);
+    return temp2;
   }
 
   static int _parseWindDegree(String input){
